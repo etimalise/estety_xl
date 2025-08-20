@@ -1,8 +1,11 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-tmp/
 *.py[codz]
 *$py.class
+
+# project specific
+temp/
+.secrets
 
 # C extensions
 *.so

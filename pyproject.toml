@@ -1,13 +1,22 @@
-[tool.poetry]
+[project]
 name = "estety-xl"
 version = "0.1.0"
 description = ""
-authors = ["etimalise <42682894+etimalise@users.noreply.github.com>"]
 readme = "README.md"
+authors = [{ name = "etimalise", email = "42682894+etimalise@users.noreply.github.com" }]
+requires-python = ">=3.13,<4"
+dependencies = [
+  "pydantic-settings~=2.10.1"
+]
 
-[tool.poetry.dependencies]
-python = "^3.13"
+[project.scripts]
+estxl = "estxl.cli:main"
 
+[tool.poetry]
+packages = [
+    { include = "utils", from = "src" },
+    { include = "estxl", from = "src" },
+]
 
 [build-system]
 requires = ["poetry-core"]
